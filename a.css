@@ -1,0 +1,46 @@
+::-webkit-scrollbar {
+	
+    width: 0px;
+}
+
+
+body{
+    font-family: Consolas;
+    white-space: pre-wrap;
+    background-color: black;
+    color: white;
+    height: 100%;
+	margin: 0px;
+    font-size: 1rem;
+     
+}
+@media screen and (max-width: 600px) {
+    .text1 {
+      font-size: 0.6rem;
+  
+    }
+  }
+
+
+
+  .text1 p::after {
+    content: "";
+    width: 9px;
+    height: 1rem;
+    background: white;
+    display: inline-block;
+  }
+  .text1 p {
+    align-items: center;
+    gap: 2px;
+  }
+
+  @keyframes cursor-blink {
+    0% {
+      opacity: 0;
+    }
+  }
+  .text1 p::after {
+
+    animation: cursor-blink 1.5s steps(2) infinite;
+}
