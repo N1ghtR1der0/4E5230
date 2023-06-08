@@ -1,0 +1,48 @@
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+
+body{
+  font-family: monaco, monospace;
+    white-space: pre-wrap;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+   margin-top: 0px;
+     
+}
+
+
+
+  .text1 p::after {
+    content: "";
+    width: 0.5rem;
+    height: 0.9rem;
+    background: white;
+    display: inline-block;
+  }
+
+
+  @keyframes cursor-blink {
+    0% {
+      opacity: 0;
+    }
+  }
+  .text1 p::after {
+
+    animation: cursor-blink 1s steps(2) infinite;
+}
+
+@media screen and (max-width: 1000px) {
+  .text1 {
+    font-size: 0.4rem;
+
+  }
+
+  .text1 p::after {
+    content: "";
+    width: 0.18rem;
+    height: 0.3rem;
+  }
+}
