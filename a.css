@@ -1,0 +1,65 @@
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+
+body {
+
+  background-color: black;
+  color: white;
+
+
+}
+
+.text1 {
+  font-family: 'Consolas', 'BitstreamVeraSansMono', 'CourierNew', Courier, monospace;
+  white-space: pre-wrap;
+  font-size: 1rem;
+  margin-top: 0px;
+  display: inline-block;
+}
+.carret {
+  display: inline-block;
+}
+.carret p {
+  object-position: left;
+  margin: 0px;
+}
+
+.carret p::after {
+  content: "";
+  width: 0.5rem;
+  height: 0.9rem;
+  background: white;
+  display: inline-block;
+}
+
+
+@keyframes cursor-blink {
+  0% {
+    opacity: 0;
+  }
+}
+
+.carret p::after {
+
+  animation: cursor-blink 1s steps(2) infinite;
+}
+
+@media screen and (max-width: 1000px) {
+  .text1 {
+    font-size: 0.3rem;
+
+  }
+
+  .carret p::after {
+    content: "";
+    width: 0.15rem;
+    height: 0.25rem;
+  }
+}
+
+a {
+  color: #E2E3E2;
+  text-decoration: none;
+}
